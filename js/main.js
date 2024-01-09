@@ -7,6 +7,16 @@ btn.addEventListener("click", function () {
   links.classList.toggle("active");
 });
 
+// loader
+
+const fadeOut = () => {
+  const loader = document.querySelector(".wrapper");
+  setTimeout(() => {
+    loader.classList.add("fade");
+  }, 2000);
+};
+
+window.addEventListener("load", fadeOut);
 
 // Information About Game
 

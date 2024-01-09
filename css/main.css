@@ -65,6 +65,69 @@ a {
 
 /* End Global Rules */
 /* Start header  */
+/* Start Loader */
+.wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: var(--bg-body);
+  height: 100vh;
+  width: 100%;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+.fade {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 3px dashed var(--main-color);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    -moz-transform: translate(-50%, -50%) rotate(360deg);
+    -ms-transform: translate(-50%, -50%) rotate(360deg);
+    -o-transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* End Loader */
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -217,6 +280,7 @@ header .container .navbar ul li a.active {
 }
 
 @keyframes slide {
+
   0%,
   100% {
     background-image: url(../image/bg/cover.jpg);
@@ -237,7 +301,7 @@ header .container .navbar ul li a.active {
   80% {
     background-image: url(../image/bg/cover5.jpg);
   }
-  
+
   95% {
     background-image: url(../image/bg/cover6.jpg);
   }
